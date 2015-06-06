@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "WebRTC_test",
+	"version": "0.1",
+	"background": {
+		"scripts": ["1_jquery.js", "2_fcs.js", "3_kandy.js", "4_background.js"]
+	},
+
+	"browser_action":{
+		"default_icon": "assets/nexogy_icon.png"
+	},
+
+	"permissions": [
+		"notifications",
+		"activeTab",
+		"background"
+	]
+}

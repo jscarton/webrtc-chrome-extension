@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebRTC Costumer Support</title>
+
+	<script src="1_jquery.js"></script>
+	<script src="2_fcs.js"></script>
+	<script src="3_kandy.js"></script>
+	<script src="js/index.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="left-side">
+		<div class="video-container">
+			<div class="header-container">
+				<span class="icons">
+					<a href="javascript:void(0)"><i class="fa fa-video-camera"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-volume-up"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-microphone"></i></a>
+				</span>
+			</div>
+			<div class="video-body" id="videoBody"></div>
+		</div>
+		<div class="chat-container">
+			<div class="chat-body">
+				
+			</div>
+			<div class="chat-message">
+				<form method="post" id="frm_message">
+						<input type="text" id="txt_message">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="right-side">
+		<div class="header">
+			<div class="call-buttons">
+				<button id="btnAnswer" class="btn-awnser">
+					<i class="fa fa-phone"></i>
+					Awnser
+				</button>
+				<button id="btnHangup" class="btn-logout">
+					<i class="fa fa-sign-out"></i>
+					Logout
+				</button>
+			</div>
+			<img src="assets/logo_nexogy.png">
+		</div>
+		<div class="side-body"></div>
+	</div>
+</div>
+</body>
+</html>

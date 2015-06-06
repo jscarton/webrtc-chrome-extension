@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebRTC APP Client</title>
+	
+	<script type="text/javascript" src="1_jquery.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+	<form id="form-login" class="form-login" method="post" action="" role="login">
+		<img src="/assets/logo-big.png" class="img-responsive" alt="">
+		 <div class="form-controls">
+		 	<div class="form-control-container">
+		 		<span class="input-addon">
+		 			<i class="fa fa-user"></i>
+		 		</span>
+		 		<input type="text" id="txt_username" placeholder="Username" class="form-control">
+		 	</div>
+		 	<div class="form-control-container">
+		 		<span class="input-addon">
+		 			<i class="fa fa-lock"></i>
+		 		</span>
+		 		<input type="password" id="txt_password" placeholder="Password" class="form-control">	
+		 	</div>
+		 	<div class="link-password">
+		 		<a href="javascript(0)">Forgot your password</a>
+		 	</div>
+		 	<div class="submit-container">
+		 		<div class="button-container">
+		 			<button type="submit">Log in</button>
+		 		</div>
+		 	</div>
+		 </div>
+	</form>
+	<div id="context-container">
+		<div class="container">
+	<div class="left-side">
+		<div class="video-container">
+			<div class="header-container">
+				<span class="icons">
+					<a href="javascript:void(0)"><i class="fa fa-video-camera"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-volume-up"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-microphone"></i></a>
+				</span>
+			</div>
+			<div class="video-body" id="videoBody"></div>
+		</div>
+		<div class="chat-container">
+			<div class="chat-body">
+				
+			</div>
+			<div class="chat-message">
+				<form method="post" id="frm_message">
+						<input type="text" id="txt_message">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="right-side">
+		<div class="header">
+			<div class="call-buttons">
+				<button id="btnAwnser" class="btn-awnser">
+					<i class="fa fa-phone"></i>
+					Awnser
+				</button>
+				<button id="btnLogout" class="btn-logout">
+					<i class="fa fa-sign-out"></i>
+					Logout
+				</button>
+			</div>
+			<img src="assets/logo_nexogy.png">
+		</div>
+		<div class="side-body"></div>
+	</div>
+</div>
+	</div>
+</body>
+</html>

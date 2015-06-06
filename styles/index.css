@@ -1,0 +1,129 @@
+body{
+	background: #eee;
+	overflow: hidden;
+}
+.container{
+	width: 780px;
+	height: 1550px;
+	overflow: hidden;
+}
+.left-side{
+	margin: 5px 0;
+	float: left;
+	max-height: 25px;
+	width: 35%;
+	height: auto;
+}
+.video-container{
+	background: #FFF;
+	height: 259px;
+	width: 100%;
+	border-width: 0 1px 1px 0;
+  	border-color: #eee;
+  	border-style: solid;
+}
+.header-container{
+	width: 92%;
+	text-align: right;
+	padding: 19px 10px;
+	border-bottom: 1px solid #eee;
+}
+.icons a{
+	color: #FFF;
+	font-size: 13px;
+	background: #e89100;
+	width: auto;
+	height: auto;
+	padding: 8px 11px;
+	margin: 0 2px;
+}
+.icon-selected-video{
+	background: #DF0f00;
+}
+.video-body video{
+	width: 100%;
+	height: 200px;
+}
+.chat-container{
+	background: #fff;
+	width: 100%;
+	height: auto;
+}
+.chat-body{
+	width: 100%;
+	height: 200px;
+}
+.chat-message{
+	padding: 15px;
+}
+.chat-message input{
+	width: 91%;
+	height:70px;
+	padding: 0px 10px;
+	border:1px solid #ddd;
+}
+.chat-message input:focus,
+.chat-message input:active{
+	-webkit-appearance:none;
+	outline:0px !important;
+	border: 1px solid #000;
+}
+.right-side{
+	background: #FFF;
+	height: auto;
+	margin-top: -30px;
+	border-left: 1px solid #eee;
+	float: right;
+	width: 65%;
+}
+.right-side .header{
+  width: 100%;
+  height: 53px;
+  padding-top: 2px;
+  border-bottom: 1px solid #eee;
+}
+.call-buttons{
+	float: left;
+	width: 200px;
+}
+.right-side .header img{
+	float: right;
+	width: 165px;
+	height: 50px;
+}
+.right-side .side-body{
+	height: 506px;
+}
+.btn-awnser{
+	background: #2dcc70;
+	color: #FFF;
+	font-size: 13px;
+	border: none;
+	height: 35px;
+	margin: 8px;
+	border-radius: 5px;
+	width: 80px;
+	float: left;
+}
+.btn-awnser:hover{
+	background: #1aaf5d;
+}
+.btn-logout{
+	background: #e2413e;
+	color: #FFF;
+	font-size: 13px;
+	border: none;
+	height: 35px;
+	margin: 8px;
+	border-radius: 5px;
+	width: 80px;
+	float: left;
+	display: none;
+}
+.btn-logout:hover{
+	background: #e91222;
+}
+.btn-awnser:active{
+	outline: 0px !important;
+	border: 0;
+}
