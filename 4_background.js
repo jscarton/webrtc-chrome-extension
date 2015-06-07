@@ -36,7 +36,8 @@ $(document).ready(function(){
 		      });
 
 			kandy.setup({
-				localVideoContainer: $("#videoBody")[0],
+				localVideoContainer: $("#videoBodyLocal")[0],
+				remoteVideoContainer: $("#videoBodyRemote")[0],
 				listeners: {
 					loginsuccess: onLoginSuccess,
 					loginfailed: onLoginFailed,
@@ -44,7 +45,9 @@ $(document).ready(function(){
 					oncall: oncall,
 		            callanswered: onCallAnswer,
 		            callended: onCallTerminate,
-		            callrejected: onCallRejected
+		            callrejected: onCallRejected,
+		            remotevideoinitialized:onRemoteVideoInitialized,
+		            localvideoinitialized:onLocalVideoInitialized
 				}
 			});
 
@@ -59,6 +62,13 @@ $(document).ready(function(){
 			console.log("=======> Login Failed");
 		  }
 
+		  function onRemoteVideoInitialized(videoTag) {
+  			$('#videoBodyRemote').append(videoTag);
+		  }
+
+		  function onLocalVideoInitialized(videoTag) {
+  			$('#videoBodyLocal').append(videoTag);
+		  }
 		  function onCallIncoming(call, isAnonymous){
 		  	console.log("=======> Incoming Call");
 
@@ -75,10 +85,12 @@ $(document).ready(function(){
 				}
 
 			chrome.notifications.create("incoming_call!", noti_opt, function(){});
+			var details = {}
+
 			chrome.notifications.onClicked.addListener(function(){
 				
 				chrome.tabs.create({'url': chrome.extension.getURL('index.html')}, function(){
-				
+					chrome.runtime.sendMessage({kandy:kandy,callId:callId},function (response){});			
 				});
 
 			});
